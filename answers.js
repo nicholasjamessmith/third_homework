@@ -22,7 +22,7 @@ for (let i = 1; i <= 20; i++) {
 //for (let i = 0; i <= 200;) {
 //  console.log(x + i++)
 //}
-for (let i = 0; i <= 200; i+=2) {
+for (let i = 0; i <= 200; i += 2) {
   console.log(i)
 }
 //citation: https://linuxhint.com/increment-by-2-in-for-loop-in-javascript/#:~:text=To%20increment%20by%202%20in%20a%20for%20loop%2C%20use%20the,final%20or%20incremental%20expression%20statement.
