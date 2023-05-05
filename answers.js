@@ -5,7 +5,6 @@
 //CSS Intro - 4
 //CSS Basics - 4
 
-
 //////////////PART 2////////////
 // Easy Going
 ////////////////////////////////
@@ -75,6 +74,7 @@ console.log(dart);
 wolfy.pop[0]
 wolfy[0] = 'Gameboy'
 console.log(wolfy)
+
 ////////////////////////////////
 // Yell at the Ninja Turtles
 ////////////////////////////////
@@ -183,14 +183,39 @@ console.log(whereIsWaldo)
 //  Excited Kitten
 ////////////////////////////////
 //Write code that logs "Love me, pet me! HSSSSSS!" 20 times.
+//const message = "Love me, pet me! HSSSSSS!";
+//console.log(message.repeat(20))
+//citation: https://www.w3schools.com/jsref/jsref_repeat.asp#:~:text=The%20repeat()%20method%20returns,not%20change%20the%20original%20string.
 
 //For every even number in your loop, log "...human...why you taking pictures of me?...", "...the catnip made me do it...", or "...why does the red dot always get away..." at random.
+//arr = ["...human...why you taking pictures of me?...", "...the catnip made me do it...", "...why does the red dot always get away..."]
+//for (const message = "Love me, pet me! HSSSSSS!") {
+//  if 'message number' / 2 % === 0';
+//  console . log 'newMessage'
+//}
+
+const kittyTalk = ["Love me, pet me! HSSSSSS!", "...human...why you taking pictures of me?...", "...the catnip made me do it...", "...why does the red dot always get away..."]
+console.log(kittyTalk[0])
+let hss = [0];
+let pic = [1];
+let catnip = [2];
+let dot = [3];
+//You will need to use Math.random() in order to choose a random number and assign this random number to the variable you created (rather than have the variable equal 0)
+//Math.random() will return a number between 0 and 1. Array positions are integers. You will need to multiply the Math.random() number so that the range is between 0 and the length of the array
+//Then round the number by using another Math method like Math.floor() or Math.ceil() or Math.round()
+
 
 ////////////////////////////////
 //  Find the Median
 ////////////////////////////////
 //Find the median number in the following nums array, then console.log that number.
 //hint if you check the length of the array / 2, you might get not get a whole number. In which case, look into Math.floor( // something )
-//const nums = [14,11,16,15,13,16,15,17,19,11,12,14,19,11,15,17,11,18,12,17,12,71,18,15,12];
-//Expected output:
+const nums = [14, 11, 16, 15, 13, 16, 15, 17, 19, 11, 12, 14, 19, 11, 15, 17, 11, 18, 12, 17, 12, 71, 18, 15, 12];
+const median = arr => {
+  const mid = Math.floor(arr.length / 2),
+    nums = [...arr].sort((a, b) => a - b);
+  return arr.length % 2 !== 0 ? nums[mid] : (nums[mid - 1] + nums[mid]) / 2;
+};
+console.log(median(nums))
+//citation: https://www.w3resource.com/javascript-exercises/fundamental/javascript-fundamental-exercise-88.php
 //=> 15
